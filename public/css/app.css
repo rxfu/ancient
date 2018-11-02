@@ -1,0 +1,15 @@
+body {
+  background: #fff url("../images/sprinkles.png") repeat scroll top;
+}
+
+.intro {  
+  text-align: justify;
+  border: 3px dotted #9B7149;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.list-group-item {
+  border: 0;
+  background-color: transparent;
+}

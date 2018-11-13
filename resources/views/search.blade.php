@@ -11,19 +11,23 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <header role="header" id="header">
-                <h2 class="text-center">
-                    <a href="{{ url('/') }}">廣西師範大學古籍書目檢索平臺</a>
-                </h2>
+        <div class="container-fluid px-0">
+            <a href="{{ url('/') }}" class="logo-title">
+                <div class="logo">
+                    <h1 class="text-center text-dark">廣西師範大學古籍書目檢索平臺</h1>
+                </div>
+            </a>
+        </div>
 
+        <div class="container">
+            <header role="header" id="header" class="pt-3">
                 <div class="row justify-content-center">
                     <div class="col-sm-8">
                         <form method="get" action="{{ url('/books') }}">
                             <div class="input-group">
                                 <input type="text" name="q" placeholder="僅支援繁體字檢索" class="form-control" value="{{ $keyword }}">
                                 <div class="input-group-append">
-                                    <input type="submit" value="檢索" class="btn btn-primary">
+                                    <input type="submit" value="檢索" class="btn btn-primary text-white">
                                 </div>
                             </div>
                         </form>
@@ -64,7 +68,7 @@
 
                                 <div class="list-group-item flex-column align-items-start p-0">
                                     <div class="d-flex">
-                                        <h4 class="text-primary mr-2">@highlight($book->title, $keywords)</h4>
+                                        <h4 class="text-title mr-2">@highlight($book->title, $keywords)</h4>
                                         <strong class="text-success align-self-center">@highlight($book->callno, $keywords)</strong>
                                     </div>
                                     <div class="text-info mb-2">@highlight($book->author, $keywords)</div>
@@ -109,7 +113,7 @@
 
 
             <footer role="footer" id="footer" class="row justify-content-center">
-                &copy; {{ date('Y') }}. <a href="http://www.library.gxnu.edu.cn">廣西師範大學圖書館</a>.
+                &copy; {{ date('Y') }}. <a href="http://www.library.gxnu.edu.cn" class="text-dark">廣西師範大學圖書館</a>.
             </footer>
         </div>
     </body>

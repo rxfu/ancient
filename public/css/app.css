@@ -2,9 +2,26 @@ body {
   background: #fff url("../images/sprinkles.png") repeat scroll top;
 }
 
+.logo {
+  background: url("../images/logo.png") no-repeat;
+  background-size: cover;
+}
+
+.logo h1 {
+  font-size: 3.5em;
+  line-height: 4em;
+  -webkit-text-stroke: 1px #f2ecd6;
+  /* -webkit-text-fill-color: transparent; */
+  text-shadow: 4px 4px 4px #afa274;
+}
+
+a.logo-title {
+  text-decoration: none;
+}
+
 .intro {  
   text-align: justify;
-  border: 3px dotted #9B7149;
+  border: 3px dotted #afa274;
   border-radius: 25px;
   width: 100%;
 }
